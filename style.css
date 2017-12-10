@@ -1,5 +1,6 @@
 body {   
   background-color: lightblue;
+  cursor: pointer;
 }
 
 p {
@@ -9,31 +10,21 @@ p {
   padding-top: 10px;
 }
 
-.enclosure1 {margin-left: 46%; margin-top: 5%;}
-.enclosure2 {margin-left: 50%; margin-top: 1%;}
-.enclosure3 {margin-left: 48%; margin-top: 1%;}
-
-
 .bubble1, .bubble2, .bubble3 {
   display: block;
   background-color: white;
-   border-radius: 50px;
-}
-.bubble1{
-  width: 100px;
-  height: 100px;
+  border-radius: 50px;
+  box-shadow: inset 0px 0px 12px 2px lightblue;
+  opacity: 0.92;
 }
 
+.bubble1{ width: 100px; height: 100px; }
+.bubble2 { width: 50px; height: 50px; }
+.bubble3 { width: 25px; height: 25px; }
 
-.bubble2 {
-  width: 50px;
-  height: 50px;
-}
-
-.bubble3 {
-  width: 25px;
-  height: 25px;
-}
+.enclosure1 {margin-left: 46%; margin-top: 5%;}
+.enclosure2 {margin-left: 50%; margin-top: 1%;}
+.enclosure3 {margin-left: 48%; margin-top: 1%;}
 
 .enclosure1, .enclosure3 {
   animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
@@ -43,28 +34,25 @@ p {
   animation-duration: 4s;
   -webkit-animation-duration: 4s;
   -webkit-animation-delay: 2s;
-   animation-delay: 2s;
-   animation-direction: alternate;
+  animation-delay: 2s;
+  animation-direction: alternate;
 }
 
 .enclosure2 {
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
   animation-name: float2;
   -webkit-animation-name: float2;
   animation-duration: 3s;
   -webkit-animation-duration: 3s;
   -webkit-animation-delay: 1s;
-   animation-delay: 1s;
-   animation-direction: alternate;
-  
+  animation-delay: 1s;
+  animation-direction: alternate;
 }
 
 
-
-
+/* ANIMATIONS */
 .bye { display: none; }
-
 .pop { animation: explode .07s  forwards ease-out; }
 
 @keyframes explode {
@@ -83,46 +71,45 @@ p {
     transform: rotateX(0deg) translateY(0px);
     }
 
-50% {
-    -webkit-transform: rotateX(0deg) translateY(15px);
-    -moz-transform: rotateX(0deg) translateY(15px);
-    -ms-transform: rotateX(0deg) translateY(15px);
-    -o-transform: rotateX(0deg) translateY(15px);
+  50% {
+    -webkit-transform: rotateX(0deg) translateY(15px) translateX(5px);
+    -moz-transform: rotateX(0deg) translateY(15px) translateX(5px);
+    -ms-transform: rotateX(0deg) translateY(15px) translateX(5px);
+    -o-transform: rotateX(0deg) translateY(15px) translateX(5px);
     transform: rotateX(0deg) translateY(15px) translateX(5px);
 }
-100% {
-    -webkit-transform: rotateX(0deg) translateY(0px);
-    -moz-transform: rotateX(0deg) translateY(0px);
-    -ms-transform: rotateX(0deg) translateY(0px);
-    -o-transform: rotateX(0deg) translateY(0px);
-    transform: rotateX(0deg) translateY(0px);
+  100% {
+    -webkit-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    -moz-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    -ms-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    -o-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    transform: rotateX(0deg) translateY(0px) translateX(1px);
   }
 
 }
 
 @keyframes float2 {
-
   0% {
     -webkit-transform: rotateX(0deg) translateY(0px);
     -moz-transform: rotateX(0deg) translateY(0px);
     -ms-transform: rotateX(0deg) translateY(0px);
     -o-transform: rotateX(0deg) translateY(0px);
     transform: rotateX(0deg) translateY(0px);
-    }
+   }
 
-50% {
+  50% {
     -webkit-transform: rotateX(0deg) translateY(17px);
-    -moz-transform: rotateX(0deg) translateY(17px);
-    -ms-transform: rotateX(0deg) translateY(17px);
-    -o-transform: rotateX(0deg) translateY(17px);
-    transform: rotateX(0deg) translateY(17px);
-}
-100% {
+    -moz-transform: rotateX(0deg) translateY(25px);
+    -ms-transform: rotateX(0deg) translateY(25px);
+    -o-transform: rotateX(0deg) translateY(25px);
+    transform: rotateX(0deg) translateY(25px);
+  }
+
+  100% {
     -webkit-transform: rotateX(0deg) translateY(0px);
     -moz-transform: rotateX(0deg) translateY(0px);
     -ms-transform: rotateX(0deg) translateY(0px);
     -o-transform: rotateX(0deg) translateY(0px);
     transform: rotateX(0deg) translateY(0px);
   }
-
 }
